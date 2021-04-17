@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DigiClock</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: sans-serif;
+                background: url(img.jpg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+               
+            }
+
+            #container {
+                height: 240px;
+                width: 50%;
+                display: flex;
+                font-size: 3.5rem;
+                justify-content: center;
+                align-items: center;
+                margin: 220px auto;
+            }
+
+            #hr,
+            #min,
+            #sec,
+            #pre_anti {
+                display: inline-block;
+                text-align: center;
+                background: #0c8de9;
+                width: 126px;
+                height: 112px;
+                color: white;
+                border-radius: 10px;
+                padding-top: 24px;
+            }
+
+            #pre_anti {
+                background: rgb(238, 7, 180);
+                margin-left: 10px
+            }
+            .back{
+
+            }
+            .clk {
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+            }
+
+            .foot {
+                margin-top: 10px;
+                text-align: center;
+                font-size: 20px;
+                color:white;
+                font-weight:bold;
+            }
+
+            .co {
+                margin-top: -33px;
+                font-size: 78px;
+                color:white;
+                animation: blink;
+                animation-duration: 1000ms;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+
+            @keyframes blink {
+                from {
+                    opacity: 1;
+                }
+
+                to {
+                    opacity: 0;
+                }
+
+            }
+           
+        </style>
+    </head>
+
+    <body>
+        <div class="back">
+        <div id="container">
+            <div class="clk">
+                <p id="hr"></p>
+                <p class="foot">Hours</p>
+            </div>
+            <p class="co">:</p>
+            <div class="clk">
+                <p id="min"></p>
+                <p class="foot">Minutes</p>
+            </div>
+            <p class="co">:</p>
+            <div class="clk">
+                <p id="sec"></p>
+                <p class="foot">Seconds</p>
+            </div>
+            <div class="clk">
+                <p id="pre_anti"></p>
+                <p class="foot">Merideians</p>
+            </div>
+        </div>
+    </div>
+        <script src="canvas.js"></script>
+    </body>
+
+</html>
