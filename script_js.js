@@ -40,8 +40,11 @@ setInterval( function e ()
 if ( d.getHours() >= 0 && d.getHours() <= 11 )
 {
     f.innerText = "AM";
+    document.body.style.background = " no-repeat center/100% url('day.jpg')";
+    
 }
 else
 {
     f.innerText = "PM";
+    document.body.style.background = " no-repeat center/100% url('night.jpg')";
 }
